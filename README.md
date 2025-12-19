@@ -4,7 +4,7 @@ Website ini merupakan project berbasis HTML yang menampilkan kumpulan chord lagu
 
 Link Website Preview
 Website dapat diakses melalui GitHub Pages pada alamat berikut
-https://ahmdltfhi.github.io/chord-gitar/
+(https://ahmdlthfi.github.io/chord-gitar/)
 
 Link file Mp4
 https://drive.google.com/drive/folders/1bBIRLSRyKYwQLMQ7zEcZKZKUfndL5nkN?usp=sharing
