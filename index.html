@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>ChordVibes</title>
+
+<style>
+/* ========== GLOBAL ========== */
+body {
+    font-family: Arial, sans-serif;
+    margin:0; padding:0;
+    background-image: url('bg.jpg');
+    background-size:cover;
+    color:#333;
+}
+
+/* ========== HEADER NAVBAR ========== */
+header {
+    background-image: url('songbg.jpg');
+    padding:18px 0;
+    border-bottom:4px solid #131111;
+}
+
+.nav-container {
+    max-width:1150px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+}
+
+.logo {
+    font-size:28px;
+    font-weight:bold;
+    color:#0D1B2A;
+}
+
+.nav-menu a {
+    text-decoration:none;
+    margin-left:25px;
+    font-size:17px;
+    font-weight:bold;
+    color:#0D1B2A;
+    padding:8px 14px;
+    border-radius:8px;
+    transition:0.2s;
+}
+
+.nav-menu a:hover {
+    background:white;
+    color:#E57373;
+}
+
+/* ========== LAYOUT ========== */
+.wrapper {
+    display:flex;
+    max-width:1150px;
+    margin:25px auto;
+    gap:25px;
+}
+
+.content {
+    width:70%;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.sidebar {
+    width:30%;
+}
+
+.sidebar-box {
+    background:white;
+    padding:18px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom:22px;
+}
+
+.sidebar-box h3 {
+    color:#E57373;
+    border-bottom:3px solid #E57373;
+    padding-bottom:6px;
+    margin-bottom:12px;
+}
+
+/* ========== SEARCH ========== */
+.search-box {
+    display:flex;
+    margin-bottom:20px;
+}
+
+.search-input {
+    flex:1;
+    padding:12px;
+    border:1px solid #bbb;
+    border-right:none;
+    border-radius:8px 0 0 8px;
+    font-size:16px;
+}
+
+.search-btn {
+    width:55px;
+    border:none;
+    background:#0D47A1;
+    color:white;
+    cursor:pointer;
+    border-radius:0 8px 8px 0;
+    font-size:18px;
+}
+
+.search-btn:hover {
+    background:#08306A;
+}
+
+/* ========== SONG LINKS ========== */
+.song-link {
+    display:block;
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+    text-decoration:none;
+    color:#1565C0;
+    font-weight:bold;
+}
+
+.song-link:hover {
+    text-decoration:underline;
+    color:#0D47A1;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    text-align:center;
+    padding:20px;
+    background:white;
+    margin-top:40px;
+    border-top:3px solid #A7C7E7;
+}
+</style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header>
+    <div class="nav-container">
+        <div class="logo">ChordVibes</div>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="semua-lagu.html">Daftar Lagu</a>
+            <a href="kontak.html">Kontak</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ========== MAIN WRAPPER ========== -->
+<div class="wrapper">
+
+    <!-- ========== LEFT CONTENT ========== -->
+    <div class="content">
+
+        <!-- SEARCH BAR -->
+        <div class="search-box">
+            <input type="text" id="searchInput" class="search-input" placeholder="Cari lagu..." onkeyup="searchSong()">
+            <button class="search-btn">🔍</button>
+        </div>
+
+        <h2>Selamat Datang di ChordVibes</h2>
+        <p>ChordVibes adalah platform sederhana yang dirancang untuk membantu siapa pun baik pemula maupun yang sudah berpengalaman dalam mempelajari dan memainkan chord gitar berbagai lagu populer Indonesia. Kami menghadirkan tampilan yang bersih, rapi, dan intuitif agar proses pencarian chord terasa cepat dan nyaman, tanpa perlu membuka menu yang membingungkan atau halaman yang terlalu banyak.</p>
+        <p>Setiap chord yang ditampilkan telah disusun berdasarkan versi termudah yang paling umum digunakan oleh orang-orang yang baru mulai belajar gitar. Selain itu, beberapa chord juga dilengkapi dengan struktur lagu, lirik pendukung, hingga bagian intro sederhana sehingga kamu bisa memahami alur permainan dengan lebih utuh. Pendekatan ini diharapkan membantu kamu menguasai lagu lebih cepat meskipun baru memegang gitar untuk pertama kalinya.</p>
+        <p>Tujuan utama kami adalah memberikan pengalaman belajar gitar yang praktis dan menyenangkan. Cukup ketik judul lagu yang kamu cari, pilih chord yang kamu butuhkan, dan kamu dapat langsung mulai bermain kapan pun dan di mana pun. Dengan tampilan ringan dan navigasi yang sederhana, ChordVibes ingin menjadi temanmu dalam perjalanan belajar musik.</p>
+        <p>Kami berharap website ini dapat mempermudahmu menemukan lagu favorit, meningkatkan kemampuanmu dalam bermain gitar, serta menumbuhkan semangat baru untuk terus berlatih. Jelajahi koleksi chord kami dan rasakan kenyamanan belajar gitar secara mandiri.</p>
+        <p>Ketik judul lagu di kotak pencarian untuk menemukan chord dengan cepat.</p>
+
+    </div>
+
+    <!-- ========== SIDEBAR ========== -->
+    <div class="sidebar">
+
+        <div class="sidebar-box">
+            <h3>Chord Terbaru</h3>
+            <a class="song-link" href="song4.html">NOAH - Menghapus Jejakmu</a>
+            <a class="song-link" href="song8.html">Last Child - Pedih</a>
+            <a class="song-link" href="song5.html">ST12 - Jangan Pernah Berubah</a>
+        </div>
+
+        <div class="sidebar-box">
+            <h3>Mainkan Juga</h3>
+            <a class="song-link" href="song1.html">Virgoun - Surat Cinta Untuk Starla</a>
+            <a class="song-link" href="song6.html">Dewa 19 - Pupus</a>
+            <a class="song-link" href="song10.html">Ungu - Demi Waktu</a>
+            <a class="song-link" href="song9.html">Armada - Asal Kau Bahagia</a>
+            <a class="song-link" href="song7.html">Seventeen - Kemarin</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- ========== ALL SONGS (HIDDEN FOR SEARCH) ========== -->
+<div id="allSongs" style="display:none;">
+    <a href="song1.html">Virgoun - Surat Cinta Untuk Starla</a>
+    <a href="song2.html">Fourtwnty - Zona Nyaman</a>
+    <a href="song3.html">Kangen Band - Tentang Aku, Kau dan Dia</a>
+    <a href="song4.html">NOAH - Menghapus Jejakmu</a>
+    <a href="song5.html">ST12 - Jangan Pernah Berubah</a>
+    <a href="song6.html">Dewa 19 - Pupus</a>
+    <a href="song7.html">Seventeen - Kemarin</a>
+    <a href="song8.html">Last Child - Pedih</a>
+    <a href="song9.html">Armada - Asal Kau Bahagia</a>
+    <a href="song10.html">Ungu - Demi Waktu</a>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+    &copy; 2025 Luthfi — All Rights Reserved
+</footer>
+
+<script>
+function searchSong() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let data = document.querySelectorAll("#allSongs a");
+
+    let resultBox = document.getElementById("searchResults");
+    if(resultBox) resultBox.remove();
+
+    if(input === "") return;
+
+    let newBox = document.createElement("div");
+    newBox.id = "searchResults";
+    newBox.style.marginTop = "20px";
+    newBox.style.background = "white";
+    newBox.style.padding = "15px";
+    newBox.style.borderRadius = "10px";
+    newBox.style.boxShadow = "0 2px 8px rgba(0,0,0,0.08)";
+
+    let found = 0;
+
+    data.forEach(song => {
+        if(song.innerText.toLowerCase().includes(input)) {
+            let clone = song.cloneNode(true);
+            clone.className = "song-link";
+            newBox.appendChild(clone);
+            found++;
+        }
+    });
+
+    if(found === 0) newBox.innerHTML = "<p>Tidak ada hasil ditemukan.</p>";
+
+    document.querySelector(".content").appendChild(newBox);
+}
+</script>
+
+</body>
+</html>
